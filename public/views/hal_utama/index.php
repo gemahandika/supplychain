@@ -8,10 +8,14 @@ include '../../header.php';
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up"><?= $judul ?></h1>
-                    <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with Bootstrap</p>
-                    <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+                    <h1 data-aos="fade-up">SUPPLY CHAIN MANAGEMENT</h1>
+                    <span data-aos="fade-up" data-aos-delay="100">
+                        Koordinasi yang sistematis dan strategis dari fungsi bisnis dalam suatu perusahaan dan lintas bisnis dalam
+                        supply chain untuk keperluan meningkatkan kinerja jangka panjang dari perusahaan dan supply chain secara keseluruhan.
+                        "Council of Logistics"
+                    </span>
+                    <div class="d-flex flex-column flex-md-row mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#about" class="btn-get-started">News <i class="bi bi-arrow-right"></i></a>
                         <a href="https://www.youtube.com/watch?v=op4o6g2Lwow&t=5s" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
                 </div>
