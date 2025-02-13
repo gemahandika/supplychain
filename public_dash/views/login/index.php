@@ -8,7 +8,7 @@ if (isset($_SESSION['admin_username'])) {
 	exit();
 }
 
-include '../../../app/Config/koneksi.php';
+include '../../../app/config/koneksi.php';
 
 $username = "";
 $password = "";
