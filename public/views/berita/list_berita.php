@@ -7,7 +7,7 @@ $result = mysqli_query($koneksi, $query);
     <section id="recent-posts" class="recent-posts section mt-4">
         <div class="container section-title" data-aos="fade-up">
             <h2></h2>
-            <p>Berita Terkini</p>
+            <p>Berita Nasional</p>
         </div>
 
         <div class="container">
@@ -22,7 +22,7 @@ $result = mysqli_query($koneksi, $query);
                             <div class="post-content d-flex flex-column">
                                 <h3 class="post-title"><?= htmlspecialchars($row['judul']) ?></h3>
                                 <hr>
-                                <a href="blog-details.php?id=<?= $row['id_berita'] ?>" class="readmore stretched-link">
+                                <a href="berita.php?id=<?= $row['id_berita'] ?>" class="readmore stretched-link">
                                     <span>Baca Selengkapnya</span><i class="bi bi-arrow-right"></i>
                                 </a>
                             </div>

@@ -105,7 +105,7 @@ include '../../../app/config/koneksi.php';
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" href="../berita/index.php">Berita Terkini</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="../keg_asperindo/kegiatan_asperindo.php">Kegiatan Asperindo</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="../keg_asperindo/">Kegiatan Asperindo</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
                             </ul>
                         </div>
