@@ -1,6 +1,6 @@
 <?php
 include '../../header.php';
-$query = "SELECT * FROM tb_berita WHERE publish = 'yes' ORDER BY id_berita DESC"; // Sesuaikan dengan struktur tabel Anda
+$query = "SELECT * FROM tb_berita WHERE publish = 'yes' AND status = 'NASIONAL' ORDER BY id_berita DESC"; // Sesuaikan dengan struktur tabel Anda
 $result = mysqli_query($koneksi, $query);
 ?>
 <main class="main">

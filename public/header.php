@@ -37,8 +37,8 @@ include '../../../app/models/berita_models.php';
                     <li><a href="../hal_utama/index.php" class="active">Home<br></a></li>
                     <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="../berita/list_berita.php">- Nasional</a></li>
-                            <li><a href="#">- Internasional</a></li>
+                            <li><a href="../berita/berita_nasional.php">- Nasional</a></li>
+                            <li><a href="../berita/berita_internasional.php">- Internasional</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#"><span>Kegiatan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>

@@ -37,19 +37,18 @@ function uploadFile($fileInputName, $folderPath)
 if (isset($_POST['add_berita'])) {
     $judul = trim(mysqli_real_escape_string($koneksi, $_POST['judul']));
     $berita_utama = trim(mysqli_real_escape_string($koneksi, $_POST['berita_utama']));
-    $berita_1 = trim(mysqli_real_escape_string($koneksi, $_POST['berita_1']));
-    $berita_2 = trim(mysqli_real_escape_string($koneksi, $_POST['berita_2']));
     $add_date = trim(mysqli_real_escape_string($koneksi, $_POST['add_date']));
     $publish = trim(mysqli_real_escape_string($koneksi, $_POST['publish']));
+    $status = trim(mysqli_real_escape_string($koneksi, $_POST['status']));
 
     // Meng-upload kedua file gambar
     $poto_1 = uploadFile('file_1', '../assets/as_dash/img/berita/');
-    $poto_2 = uploadFile('file_2', '../assets/as_dash/img/berita/');
 
-    if ($poto_1 && $poto_2) {
+
+    if ($poto_1) {
         // Masukkan data ke tabel
-        $query = "INSERT INTO tb_berita (judul, berita_utama, berita_1, berita_2, poto_1, poto_2, tgl_buat, publish) 
-                  VALUES('$judul', '$berita_utama', '$berita_1', '$berita_2', '$poto_1', '$poto_2', '$add_date', '$publish')";
+        $query = "INSERT INTO tb_berita (judul, berita_utama, poto_1,  tgl_buat, publish, status) 
+                  VALUES('$judul', '$berita_utama', '$poto_1', '$add_date', '$publish', '$status')";
         mysqli_query($koneksi, $query);
         showSweetAlert('success', 'Sukses', 'Berita berhasil ditambahkan', '#3085d6', '../../public_dash/views/berita/index.php');
     } else {

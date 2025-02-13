@@ -19,23 +19,14 @@ $time = date("H:i");
                             <form class="forms-sample" action="../../../app/controller/Berita_controller.php" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="exampleInputName1">Judul Berita <span class="text-danger"><b>*</b></span></label>
-                                    <input type="text" class="form-control" name="judul" id="exampleInputName1" placeholder="Masukan Judul Berita">
+                                    <input style="border: 1px solid #ccc; resize: none;" type="text" class="form-control" name="judul" id="exampleInputName1" placeholder="Masukan Judul Berita">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleTextarea1">Berita Utama</label>
-                                    <textarea class="form-control" name="berita_utama" id="exampleTextarea1" rows="6" placeholder="Masukan Berita Utama"></textarea>
+                                    <label for="exampleTextarea1">Isi Berita</label>
+                                    <textarea class="form-control" name="berita_utama" id="exampleTextarea1"
+                                        rows="12" placeholder="Masukkan Berita Utama"
+                                        style="height: 400px; border: 1px solid #ccc; resize: none;"></textarea>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-md-6">
-                                        <label for="exampleTextarea1">Berita Utama 1</label>
-                                        <textarea class="form-control" name="berita_1" id="exampleTextarea1" rows="6" placeholder="Masukan Berita Utama I"></textarea>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="exampleTextarea2">Berita Utama 2</label>
-                                        <textarea class="form-control" name="berita_2" id="exampleTextarea2" rows="6" placeholder="Masukan Berita Utama II"></textarea>
-                                    </div>
-                                </div>
-
                                 <div class="form-group row">
                                     <!-- Upload Photo 1 -->
                                     <div class="col-md-6">
@@ -46,15 +37,14 @@ $time = date("H:i");
                                             <button type="button" class="btn btn-danger btn-sm mt-2" id="removeBtn1" style="display: none;" onclick="removeImage('uploadFile1', 'preview1', 'removeBtn1')">Hapus Foto</button>
                                         </div>
                                     </div>
-                                    <!-- Upload Photo 2 -->
-                                    <div class="col-md-6">
-                                        <label for="uploadFile2">Upload Photo 2: <span class="text-danger"><b>*</b></span></label>
-                                        <input type="file" class="form-control-file" name="file_2" id="uploadFile2" accept="image/*" onchange="previewImage(event, 'preview2', 'removeBtn2')">
-                                        <div class="mt-3">
-                                            <img id="preview2" src="" alt="Preview Photo 2" style="max-width: 100%; height: auto; display: none;">
-                                            <button type="button" class="btn btn-danger btn-sm mt-2" id="removeBtn2" style="display: none;" onclick="removeImage('uploadFile2', 'preview2', 'removeBtn2')">Hapus Foto</button>
-                                        </div>
-                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Status Berita <span class="text-danger"><b>*</b></span></label>
+                                    <select class="form-select" id="type_maintenance" name="status" aria-label="Default select example" required>
+                                        <option value="NASIONAL">NASIONAL</option>
+                                        <option value="INTERNASIONAL">INTERNASIONAL</option>
+                                    </select>
                                 </div>
 
                                 <input type="hidden" name="add_date" value="<?= $date ?>">
@@ -82,13 +72,10 @@ $time = date("H:i");
                                 <tr class="table-info text-center">
                                     <th style="width: 5%; font-size: 12px;">NO</th>
                                     <th style="width: 15%; font-size: 12px;">JUDUL BERITA</th>
-                                    <!-- <th style="width: 30%; font-size: 12px;">BERITA UTAMA </th>
-                                    <th style="width: 30%; font-size: 12px;">BERITA UTAMA I</th>
-                                    <th style="width: 30%; font-size: 12px;">BERITA UTAMA II</th> -->
                                     <th style="width: 10%; font-size: 12px;">PHOTO I</th>
-                                    <th style="width: 10%; font-size: 12px;">PHOTO II</th>
                                     <th style="width: 10%; font-size: 12px;">TANGGAL BUAT</th>
                                     <th style="width: 10%; font-size: 12px;">PUBLISH</th>
+                                    <th style="width: 10%; font-size: 12px;">STATUS</th>
                                     <th style="width: 10%; font-size: 12px;">ACTION</th>
                                 </tr>
                             </thead>
@@ -102,7 +89,7 @@ $time = date("H:i");
                             foreach ($result as $data) {
                                 $no++;
                                 $gambar1 = $data['poto_1'];
-                                $gambar2 = $data['poto_2'];
+                                // $gambar2 = $data['poto_2'];
 
                                 // Cek apakah gambar ada atau tidak
                                 if ($gambar1 == null) {
@@ -111,11 +98,11 @@ $time = date("H:i");
                                     $img1 = '<img src="../../../app/assets/as_dash/img/berita/' . $gambar1 . '" class="zoomable" style="width: 100%; height: 100%; border-radius: 0;">';
                                 }
 
-                                if ($gambar2 == null) {
-                                    $img2 = 'No Photo';
-                                } else {
-                                    $img2 = '<img src="../../../app/assets/as_dash/img/berita/' . $gambar2 . '" class="zoomable" style="width: 100%; height: 100%; border-radius: 0;">';
-                                }
+                                // if ($gambar2 == null) {
+                                //     $img2 = 'No Photo';
+                                // } else {
+                                //     $img2 = '<img src="../../../app/assets/as_dash/img/berita/' . $gambar2 . '" class="zoomable" style="width: 100%; height: 100%; border-radius: 0;">';
+                                // }
                             ?>
                                 <tbody>
                                     <tr>
@@ -128,12 +115,10 @@ $time = date("H:i");
                                             <!-- Menampilkan gambar 1 -->
                                             <?= $img1 != 'No Photo' ? $img1 : '<span>No Photo</span>' ?>
                                         </td>
-                                        <td class="text-center">
-                                            <!-- Menampilkan gambar 2 -->
-                                            <?= $img2 != 'No Photo' ? $img2 : '<span>No Photo</span>' ?>
-                                        </td>
+
                                         <td class="text-center" style="font-size: 12px;"><?= $data['tgl_buat'] ?></td>
                                         <td class="text-center" style="font-size: 12px;"><?= $data['publish'] ?></td>
+                                        <td class="text-center" style="font-size: 12px;"><?= $data['status'] ?></td>
                                         <td class="text-center" style="font-size: 12px;">
                                             <a href="#" class="btn btn-sm btn-primary" onclick="sendPost(<?= $data['id_berita'] ?>)">Edit</a>
                                             <button type="submit" class="btn btn-info btn-sm text-white mr-2" data-bs-toggle="modal" data-bs-target="#publishModal<?= $data['id_berita'] ?>">
