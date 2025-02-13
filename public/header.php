@@ -8,7 +8,7 @@ include '../../../app/models/berita_models.php';
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Supplychain2</title>
+    <title>Supplychain</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="../../../app/assets/as_land/img/apple-touch-icon.png" rel="apple-touch-icon">
