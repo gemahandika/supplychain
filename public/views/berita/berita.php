@@ -2,7 +2,7 @@
 include '../../header.php';
 include '../../../app/config/koneksi.php'; // Pastikan path benar
 
-$data_berita = null; // Inisialisasi variabel
+// $data_berita = null; // Inisialisasi variabel
 
 if (isset($_POST['id'])) {
     $id_berita = $_POST['id'];

@@ -32,13 +32,17 @@ include '../../../app/config/koneksi.php';
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
                     <a class="navbar-brand brand-logo text-white" href="index.html">Dashboard</a>
-                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../../app/assets/as_dash/images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="typcn typcn-th-menu"></span>
                     </button>
+                    <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../../app/assets/as_dash/images/logo-mini.svg" alt="logo" /></a> -->
+
                 </div>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="typcn typcn-th-menu"></span>
+                </button>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item  me-0">
                         <a href="../login/logout.php" class="nav-link count-indicator d-flex align-items-center justify-content-center">
@@ -47,6 +51,7 @@ include '../../../app/config/koneksi.php';
                         </a>
                     </li>
                 </ul>
+
             </div>
         </nav>
         <!-- partial -->
