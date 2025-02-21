@@ -85,7 +85,7 @@ include '../../../app/models/berita_models.php';
                             </li>
                         </ul> -->
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
