@@ -29,7 +29,7 @@ include '../../../app/models/berita_models.php';
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="index.php" class="logo d-flex align-items-center me-auto">
                 <img src="../../../app/assets/as_land/logo.png" alt="">
-                <h1 class="sitename"><b>SUPPLYCHAIN</b> </h1>
+                <h1 class="sitename"><b>UPPLYCHAIN</b> </h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
