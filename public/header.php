@@ -34,22 +34,22 @@ include '../../../app/models/berita_models.php';
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="../hal_utama/index.php" class="active">Home<br></a></li>
-                    <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li><a href="../hal_utama/index.php" class="active">HOME<br></a></li>
+                    <li class="dropdown"><a href="#"><span>BERITA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="../berita/berita_nasional.php">- Nasional</a></li>
-                            <li><a href="../berita/berita_internasional.php">- Internasional</a></li>
+                            <li><a href="../berita/berita_nasional.php">Nasional</a></li>
+                            <li><a href="../berita/berita_internasional.php">Internasional</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#"><span>Kegiatan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li class="dropdown"><a href="#"><span>KEGIATAN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="../keg_asperindo/">- Asperindo</a></li>
-                            <li><a href="#">- Perusahaan</a></li>
+                            <li><a href="../keg_asperindo/">Asperindo</a></li>
+                            <li><a href="#">Perusahaan</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Perusahaan Logistik</a></li>
-                    <li><a href="#">Layanan</a></li>
-                    <li><a href="#">Knowledge</a></li>
+                    <li><a href="#">PERUSAHAAN LOGISTIK</a></li>
+                    <li><a href="#">LAYANAN</a></li>
+                    <li><a href="#">KNOWLAGE</a></li>
                     <!-- <li><a href="#services">Kegiatan ASPERINDO</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
